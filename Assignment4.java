@@ -38,14 +38,20 @@ public class Assignment4 {
 				al.add(s.substring(i, j));
 			}
 		}
+		int max=0;
+		String maxpal="";
 		for(String a : al)
 		{
 			if(palindrome(a))
 			{
-				System.out.println(a);
-				break;
+				if(a.length()>max)
+				{
+					max=a.length();
+					maxpal=a;
+				}
 			}
 		}
+		System.out.println(maxpal);
 
 	}
 
